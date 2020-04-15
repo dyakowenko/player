@@ -7,6 +7,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
   <title>Video Player</title>
 </head>
@@ -14,30 +16,31 @@
 https://cdn.plyr.io/3.5.10/plyr.js-->
 
 <body>
-  <div class="capsule">
-  <div class="menu" id="buttons">
-    <button type="button" class="btn btn-outline-primary btn-menu" id="fileButton"
-      onclick="LoadFile()">Open</button>
-    <input type="file" id="fileInput" style="visibility: hidden;" onchange="LoadVideo(this)"/>
-  <select class="form-control btn-outline-primary" id="theme-select" onchange="choseTheme(this)">
-      <option>Bright theme</option>
-      <option>Dark theme</option>
-    </select>
+  <div class="app-container">
+    <div class="video" id="videoBox">
+      <video height="600" width="800" class="active-video" id="player" controls crossorigin playsinline>
+        <source id="videoSource" type="video/mp4">
+      </video>
+    </div>
+    <div class="menu" id="btn-container">
+      <div class="custom-file mb-2">
+        <input type="file" class="custom-file-input" id="fileInput" onchange="loadVideo(this)">
+        <label class="custom-file-label" for="fileInput">Open video</label>
+      </div>
+      <select class="form-control btn-secondary" id="theme-select" onchange="changeTheme(this)">
+        <option>Dark theme</option>
+        <option>Light theme</option>
+        <option>Forest</option>
+      </select>
+    </div>
   </div>
-  <div class="video" id="videoBox">
-    <video height="600" width="800" class="active-video" id="player" controls crossorigin playsinline>
-      <source id="videoSource" type="video/mp4">
-    </video>
-  </div>
-</div>
 
 
 
   <script src="./renderer.js"></script>
   <script src="plyr.js"></script>
   <script src="core.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </body>
 
 </html>

@@ -6,8 +6,8 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     backgroundColor:"#242424",
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 700,
     minHeight: 600,
     minWidth: 800,
     maxWidth: 1280,
@@ -18,7 +18,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('index.html');
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
