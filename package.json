@@ -1,0 +1,26 @@
+{
+  "name": "videoplayer",
+  "version": "1.0.0",
+  "description": "A simple vide player",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --platform-win32 --out=build --icon=pic/icon.ico --asar --overwrite"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Video",
+    "Player",
+    "Plyr",
+    "Simple",
+    "demo"
+  ],
+  "author": "MEV;YAAI",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^8.1.1"
+  },
+  "dependencies": {
+    "electron-packager": "^14.2.1"
+  }
+}

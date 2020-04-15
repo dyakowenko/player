@@ -1,0 +1,25 @@
+div.menu{
+    width: 20%;
+    height: auto;
+    background: rgba(36, 36, 36, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(resources/background.jpg);
+    
+} 
+
+.btn-menu{
+    margin:2px;
+}
+.capsule{
+    display: flex;
+    background: rgb(36, 36, 36);
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+.video{
+    width: 80%;
+    height: 100vh;
+}
